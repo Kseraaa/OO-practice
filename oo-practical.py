@@ -26,7 +26,7 @@ class Circle(Shape) :
         return (math.pi)*((self.radius)**2)
 
 
-class Cylinder(Circle):
+class Cylinder(Shape):
     def __init__(self, name, radius, hight):
         super().__init__(name)
         self.radius = radius
@@ -46,10 +46,12 @@ def cal_total_area(shapes):
 r1 = Rectangle('r1',4,5)
 r2 = Rectangle('r2',10,12)
 c1 = Circle('c1',10)
+c2 = Cylinder('c2', 10, 15 )
 print(r1.cal_area())
 print(r2.cal_area())
 print(c1.cal_area())
-shapes = [r1,r2,c1]
+print(c2.cal_area())
+shapes = [r1,r2,c1,c2]
 total_area = cal_total_area(shapes)
 print(total_area)
 
